@@ -21,7 +21,7 @@ import sys
 OWNER = "iamnottaiiii"
 # bjvfi1-8 plus bjvfi10-20 (lead batches, added 2026-11-03). bjvfi9 was deleted 2026-09-25 (its sites moved to bjvfi7)
 SUB_REPOS = [f"bjvfi{i}" for i in range(1, 9)] + [f"bjvfi{i}" for i in range(10, 21)]
-TOKEN=<redacted>
+TOKEN = os.environ.get("GH_TOKEN", "")
 PART_PATHS = ["sites-1.json", "sites-2.json"]
 WORKDIR_BASE = os.environ.get("REBUILD_WORKDIR", "/tmp/sitesjson-rebuild")
 
